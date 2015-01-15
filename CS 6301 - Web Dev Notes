@@ -1,0 +1,82 @@
+Notes CS 6301
+MW 1pm
+--------01/12/2015
+
+Syllabus Talk / overview
+--
+Office hours: Tuesdays; 12p-2p
+- Use email address nurcan.yuruk@utdallas.edu; responds within 24 hours
+
+TAs grade assignments
+- reach out to TAs first, then contact prof
+
+Final project graded by Professor
+
+Hands on course
+- learn best if you use it
+- half of the classtime for theory; basic information
+- session for mostly practice work 
+	Given a small task and you will implement the task in the class
+	If time, given solution and you discuss
+- end of class, you should be able to design and develop a website by yourself
+- final project in PHP or Ruby on Rails
+
+Grading
+	2 exams; 20% each (not comprehensive)
+		Multiple choice in testing center (35ish questions)
+	Practice 10%
+	assignments / final project 25% each
+
+--Topic 1: web architecture, standards, and protocols
+
+internet vs www (world wide web) - not the same thing
+	internet: 
+		infastructure; the network of networks and is a result of ARPANET project 
+		internet evolved from this project. 
+		main idea; connect computers (mainframe) at major universities together physically so they can exchange information
+	WWW: 
+		another avenue for transmitting data over the inetent
+		need the infastructure (internet) to do this
+		communication between two devices, you need internet, you don't need WWW
+		what's the difference? 
+			you have documents written in HTML (HypterText Markup Language) or some other languages (i.e. XML, XHTML)
+			using Uniform Resource Identifier (URI); commonly URL
+			web browser uses address bar as a locator, you provide a URL to locate the web document on the WWW
+			format is HTML of these documents
+		Tim Berners-Lee at CERN lab first established first web server (1990)
+			built on NeXT machine (Apple)
+
+TCP/IP Protocols
+	layers of communication that are the backbone of the internet
+	TCP - Transmission Control Protocol
+		is like the postal service. responsible for sending and receiving the data packets
+	IP - Internet Protocol
+
+	model on PPT
+
+	HTTP - Hyper text transfer protocol
+		Communication between client and server
+		is on the application layer
+		foundation of data communication in WWW
+
+	HTTPS - secure HTTP
+
+	FTP - file transfer protocol
+
+Web architecture
+
+	Client-server model
+
+Web Servers
+	help deliver web content; accept HTTP; respond with static HTML (in general)
+	Most common: Apache, IIS, Nginx, GWS 
+
+Application Servers
+	exposes business logic to client applications through protocols
+	Typical: WebSphere, WebLogic, Tomcat, JBoss, Glassfish
+
+Frameworks makes the coding much easier. 
+	Ruby is the language; Ruby on Rails is the framework
+	Not as flexible as a pure language, but makes easier
+
+	

@@ -1,0 +1,74 @@
+CS 6350 - Big Data
+lkhan@utdallas.edu
+utdallas.edu/~lkhan/Spring2015
+----01/13/2015
+
+--Overview
+
+Structured vs unstructured
+
+set vs list
+	set: no duplicates
+	list: could be duplicated
+
+Relational DB is structured data
+	Oracle, DB2, IBM, etc 
+
+Unstructured could be a news article
+
+semi-structured data: i.e. XML, HTML
+
+Facebook, i.e. has billions of users, each has unique profile. 
+	video/images are unstructured, complex data
+	FB contains all types of data (structured, semi, un)
+
+Data is huge 
+
+consider banking application - data is updated frequently (withdraw/deposit of amounts)
+
+model: write-once, read many (FB status, Twitter tweets)
+
+Google idea: Google File System
+
+	MapReduce
+	Stored on Hadoop or GFS
+	storage kept in commodity hardware 
+		may die/go down, therefore replication. duplication factor is 3
+
+Grading
+	Two exams (open book) - 45%
+		March 23rd
+		May (not comprehensive)
+
+	4 assignments and a group project
+
+--Lecture 01/ Big Data Intro
+
+Big data is...
+	3 Vs: Volume, Velocity, Variety
+	Scale (Volume) - data is increasing exponentially 
+	Complexity (Variety) - data can come in various formats
+		static vs streaming
+	Speed (velocity) - data is being generated fast and needs to be processed
+		late decisions = missed opportunities
+		i.e. promotions are too late / recomendations aren't valid any more
+	Added V: Veracity
+		data in doubr: uncertainity due to inconsistency / incompleteness
+
+Harnessing Big Data
+	OLAP quries. lots of grouping (Data Warehousing solution)
+
+	Example:
+	select sum(profit)
+	from walmart_profit
+	where city='plano'
+
+		What's the problem of this approach? works in a batch oriented manner. decisions can't be made in real-time. this model may not be effective. 
+
+	RTAP: real-time analytics processing
+
+Who are generating big data?
+	social media, scientific instruments, mobile devices
+	no longer hindered bu ability collect
+	but, ability to analyze this data in timely manner is the requirement of big data management and analytics
+
