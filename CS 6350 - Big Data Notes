@@ -72,3 +72,75 @@ Who are generating big data?
 	no longer hindered bu ability collect
 	but, ability to analyze this data in timely manner is the requirement of big data management and analytics
 
+--01/15/2015
+
+Recap
+	Talked about what big data means: bunch of V's; volume, velocity, variety, varacity, ...
+	Data warehousing in previous, which run OLAP queries
+	now need RTAP; real time analytical proessing. wharehousing solution doesn't work--big data solution
+
+	New model of generating data: everyone is generating data (social media, wearables, smart phones, etc)
+	as compared to old, where the news media created data
+
+	Commoddity hardware used for many machines
+		open source SW; ran in commodidty hardware
+		called: shared nothing, masively parallel processing, scale our architecture
+		each mahine has a CPU, memory, HD (not sharing anything across themselves)
+	vs. Teradata; charge for hardware and software (very expensive)
+
+Intro BD continued
+
+write-once, read many times
+-> append possible
+-> once created, you will not touch it again
+
+
+Hadoop
+	Original files are split into blocks (i.e. 64MB blocks)
+
+Cassandara
+	applies hash function and puts data based on key
+	supports frequent writes and reads intermixed
+
+Hadoop is good for batch processing.
+	hadoop updates counts a lot
+	Hadoop is good for a lot of read, but write only occasionally
+
+When is it better to use Cassandara?
+	example FB; many status updates.  new records are coming continuously. 
+	For hadoop, large file comes, and it is split into various data nodes. 
+	frequent writes and reads, then hadoop may not be a good choice
+
+Mahout
+	analytics / data-mining tooll
+	uses spark
+
+
+Class focus: hadoop/apreduce, noSql, Spark, stream, bigtable, cassandra
+- learinng platform (how designed)
+- writing jobs in diff languages (python, java, scala, c)
+- analytics *mahout
+- graph processing 
+	pregel-google, giraf-open source
+	example: linkedin connections; large graph of connections, how will you make decisions
+
+---end intro
+
+Big Data processing
+
+divide-and-conquer strategy
+	work is assigned to nodes -> each does the task -> work is combined
+
+
+parallel vs distributed system 
+	multiple  machines with own memory
+	this coure we focus on distributed
+
+parallelization problems
+	statelessness
+	worker dies (assign to diff node with copy)
+	common issue: syncronization
+		need sync system
+		tricky issue, finding bug is difficult
+
+From Lisp to MapReduce and GF
